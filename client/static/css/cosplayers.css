@@ -1,0 +1,12 @@
+.cosplayer {
+	margin-top: 10px;
+}
+
+.cosplayer img {
+	width: 100%;
+	border-radius: 5px;
+}
+
+.cosplayers_hover {
+	opacity: 0.9;
+}

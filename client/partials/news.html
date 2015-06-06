@@ -1,0 +1,59 @@
+<link rel="stylesheet" type="text/css" href="static/css/news.css">
+<div ng-controller='news_controller'>
+	
+	<div class='row container content'>
+		<div class='col-md-10 col-sm-10'>
+			<h2>#Cosplaymademe News</h2>
+
+
+
+			<div class='news_content' ng-repeat="new in news | orderBy: '-date'">
+				<div class='row'>
+					<div class='col-md-4 col-sm-6'>
+						<img ng-if='new.photo_link' ng-src='{{new.photo_link}}'>
+						<iframe ng-if='new.video_link' ng-src="{{video_link(new.video_link)}}" frameborder="0" allowfullscreen></iframe>
+					</div>
+					<div class='col-md-8 col-sm-6'>
+						<h4>{{new.title}}</h4>
+						<p>{{new.description}}</p>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+		<div class='col-md-2 col-sm-2'>
+			<h4>Upcoming Cons</h4>
+			
+			<div class='con_list' ng-repeat='con in cons'>
+				<p>{{con.name}}</p>
+				<p>{{con.city}}, {{con.state}}, {{con.country}}</p>
+				<p>URL: <a ng-href='{{con.url_link}}'>{{con.url_link}}</a></p>
+				<p>Start date: {{con.start_date | date:'mediumDate'}}</p>
+				<p>End date: {{con.end_date | date:'mediumDate'}}</p>
+			</div>
+			
+
+			<div class='future_cons' ng-repeat='con in cons'>
+				<a ng-href='{{con.link}}'><h5>{{con.title}}</h5></a>
+			</div>
+
+
+
+
+
+
+		</div>
+
+
+
+
+
+
+
+	</div>
+
+
+</div>

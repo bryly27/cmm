@@ -1,0 +1,30 @@
+.header {
+	border-bottom: 1px solid black;
+}
+
+.header li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.welcome {
+	margin-left: 50px;
+}
+
+.form {
+	margin-left: 60px;
+	margin-top: 30px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+.content {
+	margin-top: 70px;
+}
+
+#website_tag h1{
+	font-size: 25px;
+	font-family: 'Ceviche One', cursive;
+}

@@ -1,0 +1,29 @@
+.con_list {
+	border-top: 1px solid silver;
+	padding-top: 5px;
+}
+
+.con_list p {
+	font-size: 10px;
+	line-height: 80%;
+}
+
+.news_content {
+	border-top: 1px solid silver;
+	padding: 10px;
+}
+
+.news_content h4 {
+	margin-left: 20px;
+	text-align: center;
+}
+
+.news_content img, .news_content video {
+	width: 100%;
+}
+
+h2 {
+	text-align: center;
+}
+
+

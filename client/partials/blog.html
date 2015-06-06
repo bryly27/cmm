@@ -1,0 +1,30 @@
+<link rel="stylesheet" type="text/css" href="static/css/blog.css">
+<div ng-controller='blog_controller'>
+	
+	<div class='row container content'>
+		<div class='col-md-10 col-sm-10'>
+			<h2>#Cosplaymademe Blog</h2>
+
+
+
+			<div class='blog_content' ng-repeat="blog in blogs | orderBy: '-date'">
+				<div class='row'>
+					<div class='col-md-4 col-sm-6'>
+						<img ng-if='blog.photo_link' ng-src='{{blog.photo_link}}'>
+					</div>
+					<div class='col-md-8 col-sm-6'>
+						<h4>{{blog.title}}</h4>
+						<p>{{blog.description}}</p>
+					</div>
+				</div>
+			</div>
+
+
+
+
+		</div>
+
+	</div>
+
+
+</div>

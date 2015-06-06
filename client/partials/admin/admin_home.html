@@ -1,0 +1,173 @@
+<link rel="stylesheet" type="text/css" href="static/css/admin_home.css">
+<div ng-controller='admin_controller' class='container'>
+	<div class='content container'>
+		<p>Welcome {{admin_user}}, you are now logged in as admin.</p>
+		<div class='logout pull-right'>
+			<a href="" ng-click='admin_logoff()'>Log Out</a>
+		</div>
+	</div>
+
+	<div class='container'>
+
+		<div class='col-md-9'>
+
+			<!-- add news section -->
+				<a href='' data-toggle='modal' data-target='#add_news'><p>Add News</p></a>
+			<div class='add_news'>
+
+				<!-- add news modal -->
+				<div class='modal fade' id='add_news' role='dialog'>
+					<div class='modal-dialog'>
+						<div class='modal-content'>
+
+							<div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			          <h4 class="modal-title">Add News</h4>
+			        </div>
+
+			        <div class="modal-body">
+			       		<form>
+ 									<input type='text' ng-model='new_news.title' placeholder='title'>
+ 									<textarea ng-model='new_news.description' placeholder='description'></textarea>
+ 									<label for='photo'>Photo:</label><input id='photo_radio' type='radio' name='link' id='photo' ng-click='photo = true; video=false'>
+ 									<label for='video'>Video:</label><input id='video_radio' type='radio'  name='link' id='video' ng-click='video = true; photo = false'>
+ 									<p ng-show='photo'>Photo Link: <input type='text' ng-model='new_news.photo_link'></p>
+ 									<p ng-show='video'>Video Link: <input type='text' ng-model='new_news.video_link'></p>
+ 									<p>Date: <input type='text' ng-model='new_news.date'></p>
+ 									<input type='submit' value='Add News' ng-click='add_news(new_news)' data-dismiss="modal">
+			       		</form>
+			        </div>
+			        <div class="modal-footer">
+			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        </div>
+
+						</div>
+					</div>
+				</div>
+				<!-- end of modal -->
+
+				<!-- repeat news content -->
+				<div class='news_content' ng-repeat="new in news | orderBy: '-date'">
+					<div class='row'>
+						<div class='col-md-4'>
+							<img ng-if='new.photo_link' ng-src='{{new.photo_link}}'>
+							<iframe ng-if='new.video_link' ng-src="{{video_link(new.video_link)}}" frameborder="0" allowfullscreen></iframe>
+						</div>
+						<div class='col-md-8'>
+							<p>{{new.title}} -{{new.date | date:'mediumDate'}}</p>
+							<p>{{new.description}}</p>
+							<a href="" ng-click='delete_news(new)'>Delete news post</a>
+						</div>
+					</div>
+				</div>
+					
+			</div>
+
+
+			<!-- add blog section -->
+			<a href='' data-toggle='modal' data-target='#add_blog'><p>Add Blog</p></a>
+			<div class='add_blog'>
+
+				<!-- add news modal -->
+				<div class='modal fade' id='add_blog' role='dialog'>
+					<div class='modal-dialog'>
+						<div class='modal-content'>
+
+							<div class="modal-header">
+			          <button type="button" class="close" data-dismiss="modal">&times;</button>
+			          <h4 class="modal-title">Add Blog</h4>
+			        </div>
+
+			        <div class="modal-body">
+			       		<form>
+ 									<input type='text' ng-model='new_blog.title' placeholder='title'>
+ 									<textarea ng-model='new_blog.description' placeholder='description'></textarea>
+ 									<p>Photo Link: <input type='text' ng-model='new_blog.photo_link'></p>
+ 									<p>Date: <input type='text' ng-model='new_blog.date'></p>
+ 									<input type='submit' value='Add Blog' ng-click='add_blog(new_blog)' data-dismiss="modal">
+			       		</form>
+			        </div>
+			        <div class="modal-footer">
+			          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			        </div>
+
+						</div>
+					</div>
+				</div>
+
+				<!-- repeat blog content -->
+				<div class='news_content' ng-repeat="blog in blogs | orderBy: '-date'">
+					<div class='row'>
+						<div class='col-md-4'>
+							<img ng-src='{{blog.photo_link}}'>
+						</div>
+						<div class='col-md-8'>
+							<p>{{blog.title}} -{{blog.date | date:'mediumDate'}}</p>
+							<p>{{blog.description}}</p>
+							<a href="" ng-click='delete_blog(blog)'>Delete blog post</a>
+						</div>
+					</div>
+				</div>
+
+	
+			</div>
+		</div>
+
+
+
+		<div class='col-md-3 add_con'>
+			<a href='' data-toggle='modal' data-target='#add_con'><p>Add Con</p></a>
+
+			<!-- add con modal -->
+			<div class='modal fade' id='add_con' role='dialog'>
+				<div class='modal-dialog'>
+					<div class='modal-content'>
+
+						<div class="modal-header">
+		          <button type="button" class="close" data-dismiss="modal">&times;</button>
+		          <h4 class="modal-title">Add Con</h4>
+		        </div>
+
+		        <div class="modal-body">
+		       		<form>
+		       			<p><input type='text' ng-model='con.name' placeholder='event name'></p>
+		       			<p><input type='text' ng-model='con.city' placeholder='city'></p>
+		       			<p><input type='text' ng-model='con.state' placeholder='state'></p>
+		       			<p><input type='text' ng-model='con.country' placeholder='country'></p>
+		       			<p>URL:</p>
+		       			<input type='text' ng-model='con.url_link'>
+		       			<p>Start Date:</p>
+		       			<input type='date' ng-model='con.start_date'>
+		       			<p>End Date:</p>
+		       			<input type='date' ng-model='con.end_date'>
+		       			<p><input type='submit' value='Add Con' class='pull-right' ng-click='add_con(con)' data-dismiss="modal"></p>
+		       		</form>
+		        </div>
+		        <div class="modal-footer">
+		          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        </div>
+
+					</div>
+				</div>
+			</div>
+
+
+			
+			<p>List of cons</p>
+			<ul>
+				<li ng-repeat='con in cons'>
+					<div class='con_list'>
+						<p>{{con.name}}</p>
+						<p>{{con.city}}, {{con.state}}, {{con.country}}</p>
+						<p>URL: <a target='_blank' ng-href='{{con.url_link}}'>{{con.url_link}}</a></p>
+						<p>Start date: {{con.start_date | date:'mediumDate'}}</p>
+						<p>End date: {{con.end_date | date:'mediumDate'}}</p>
+						<p><a href="" ng-click='delete_con(con)'>Delete Con</a></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+
+	</div>
+</div>

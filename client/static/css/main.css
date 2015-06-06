@@ -1,0 +1,15 @@
+.main_profile_photos img {
+	width: 100%;
+	margin: 5px;
+	border-radius: 5px;
+}
+
+.main_profile_photos video {
+	width: 100%;
+}
+
+.main_hover {
+	opacity: 0.9;
+}
+
+

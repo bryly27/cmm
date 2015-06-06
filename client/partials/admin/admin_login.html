@@ -1,0 +1,18 @@
+<div ng-controller='admin_controller' class='content container'>
+	<h3 ng-show='err'>{{err}}</h3>
+	<form ng-submit='login(user)'>
+		<p>Login</p>
+		<p><input type='text' ng-model='user.username' placeholder='username'></p>
+		<p><input type='password' ng-model='user.password' placeholder='password'></p>
+		<p><input type='submit' value='Login'></p>
+	</form>
+	<hr>
+	<form ng-submit='register(new_user)'>
+		<p>Register</p>
+		<p><input type='text' ng-model='new_user.username' placeholder='username'></p>
+		<p><input type='password' ng-model='new_user.password' placeholder='password'></p>
+		<p><input type='password' ng-model='new_user.confirm_password' placeholder='confirm password'></p>
+		<p><input type='password' ng-model='new_user.secret_key' placeholder='key'></p>
+		<p><input type='submit' value='Register'></p>
+	</form>
+</div>
