@@ -33,7 +33,7 @@
 		        <div class="modal-body">
 		       		<div class='row'>
 		       			<div class='col-md-8 col-sm-8 col-xs-8'>
-		       				<img ng-if="profile.type === 'photo'" ng-src="{{profile.images.standard_resolution.url}}">
+		       				<img ng-if="profile.type === 'photo'" ng-src="{{profile.images.standard_resolution.url}}" alt='cosplaymademe instagram photos'>
 		       				<video ng-if="profile.type === 'video'" ng-src='{{video_link(profile.videos.standard_resolution.url)}}' controls></video>
 		       			</div>
 		       			<div class='col-md-4 col-sm-4 col-xs-4'>
