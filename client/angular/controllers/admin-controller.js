@@ -1,4 +1,4 @@
-cosplay.controller('admin_controller', function($scope, $location, $route, admin_factory, localStorageService) {
+cosplay.controller('admin_controller', function($scope, $location, $route, admin_factory, localStorageService, $sce) {
 
 	$scope.admin_user = localStorageService.get('current_user');
 
@@ -76,7 +76,6 @@ cosplay.controller('admin_controller', function($scope, $location, $route, admin
   };
 
   $scope.add_blog = function(data){
-    console.log(data);
     data.type = 'blog';
     admin_factory.add_blog(data, function(results){
       $route.reload();
@@ -95,6 +94,10 @@ cosplay.controller('admin_controller', function($scope, $location, $route, admin
 
   $scope.video_link = function(data){
     return data;
+  };
+
+  $scope.convert_html = function(data){
+    return $sce.trustAsHtml(data);
   };
 
 
