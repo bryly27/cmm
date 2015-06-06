@@ -1,4 +1,4 @@
-cosplay.controller('news_controller', function($scope, news_factory $sce) {
+cosplay.controller('news_controller', function($scope, news_factory, $sce) {
 
 
   news_factory.get_cons(function(results){
