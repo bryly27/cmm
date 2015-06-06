@@ -155,7 +155,7 @@
 			
 			<p>List of cons</p>
 			<ul>
-				<li ng-repeat='con in cons'>
+				<li ng-repeat="con in cons | orderBy: 'start_date'">
 					<div class='con_list'>
 						<p>{{con.name}}</p>
 						<p>{{con.city}}, {{con.state}}, {{con.country}}</p>
