@@ -30,7 +30,7 @@
 			<div class='con_list' ng-repeat="con in cons | orderBy: 'start_date'">
 				<p>{{con.name}}</p>
 				<p>{{con.city}}, {{con.state}}, {{con.country}}</p>
-				<p>URL: <a ng-href='{{con.url_link}}'>{{con.url_link}}</a></p>
+				<p>URL: <a ng-href='{{con.url_link}}' target='_blank'>{{con.url_link}}</a></p>
 				<p>Start date: {{con.start_date | date:'mediumDate'}}</p>
 				<p>End date: {{con.end_date | date:'mediumDate'}}</p>
 			</div>
