@@ -6,7 +6,6 @@ cosplay.controller('blog_controller', function($scope, blog_factory, $sce) {
   });
 
   $scope.convert_html = function(data){
-    console.log('here', data);
     return $sce.trustAsHtml(data);
   };
 

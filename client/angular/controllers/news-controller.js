@@ -1,4 +1,4 @@
-cosplay.controller('news_controller', function($scope, news_factory) {
+cosplay.controller('news_controller', function($scope, news_factory $sce) {
 
 
   news_factory.get_cons(function(results){
@@ -11,6 +11,10 @@ cosplay.controller('news_controller', function($scope, news_factory) {
 
   $scope.video_link = function(data){
   	return data;
+  };
+
+  $scope.convert_html = function(data){
+    return $sce.trustAsHtml(data);
   };
 
 

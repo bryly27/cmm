@@ -55,7 +55,7 @@
 						</div>
 						<div class='col-md-8'>
 							<p>{{new.title}} -{{new.date | date:'mediumDate'}}</p>
-							<p>{{new.description}}</p>
+							<p ng-bind-html="convert_html(new.description)"></p>
 							<a href="" ng-click='delete_news(new)'>Delete news post</a>
 						</div>
 					</div>

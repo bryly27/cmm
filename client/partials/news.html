@@ -15,7 +15,8 @@
 					</div>
 					<div class='col-md-8 col-sm-6'>
 						<h4>{{new.title}}</h4>
-						<p>{{new.description}}</p>
+						<p class='pull-right'>{{new.date | date:'mediumDate'}}</p><br>
+						<p ng-bind-html="convert_html(blog.description)"></p>
 					</div>
 				</div>
 			</div>
