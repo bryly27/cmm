@@ -15,7 +15,7 @@
 		<!-- start photo repeat -->
 		<div ng-repeat='profile in profiles' class='col-md-3 col-sm-6 col-xs-12 main_profile_photos'>
 
-			<a ng-href='' data-toggle="modal" data-target="#{{profile.id}}"><img ng-src="{{profile.images.standard_resolution.url}}" ng-class="{main_hover: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false"></a>
+			<a ng-href='' data-toggle="modal" data-target="#{{profile.id}}"><img ng-src="{{profile.images.low_resolution.url}}" ng-class="{main_hover: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false"></a>
 
 			<!-- Modal -->
 		  <div class="modal fade" id="{{profile.id}}" role="dialog">
