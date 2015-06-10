@@ -18,7 +18,7 @@
 	text-align: center;
 }
 
-.news_content img, .news_content video {
+.news_content img, .news_content iframe {
 	width: 100%;
 }
 
