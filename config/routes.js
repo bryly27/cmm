@@ -63,7 +63,6 @@ app.post('/news/delete_blog', function(req, res){
 app.post('/comment/newComment', function(req, res){
 	models.newComment(req, res);
 });
-	
 
 	
 

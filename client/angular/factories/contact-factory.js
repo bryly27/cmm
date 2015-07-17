@@ -4,7 +4,7 @@ cosplay.factory('contact_factory', function($http){
 
 	
 	factory.submitForm = function(data, callback){
-		$http.post('/comment/newComment', data).success(function(){
+		$http.post('/comment/newComment', data).success(function(results){
 			callback();
 		});
 	};
