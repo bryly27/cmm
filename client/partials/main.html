@@ -15,6 +15,8 @@
 				</div>
 
 				<!-- start photo repeat -->
+				<div class="row">
+					<div class="col-md-10 col-sm-10 col-xs-12">
 				<div ng-repeat='profile in profiles' class='col-lg-3 col-md-3 col-sm-3 col-xs-4 main_profile_photos'>
 
 					<a href='' data-toggle="modal" data-target="#{{profile.id}}"><img ng-src="{{profile.images.low_resolution.url}}" ng-class="{main_hover: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false"></a>
@@ -61,8 +63,8 @@
 				  </div>
 				</div>
 				<!-- end repeat -->
-		<!-- 	</div>
-		</div> -->
+			</div>
+		</div>
 
 	</div>
 
