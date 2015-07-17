@@ -3,6 +3,7 @@ var News = mongoose.model('News');
 var Blog = mongoose.model('Blogs');
 var User = mongoose.model('Users');
 var Con = mongoose.model('Cons');
+var Comment = mongoose.model('Comments');
 var ig = require('instagram-node').instagram();
 ig.use({ access_token: '2058512314.c1a259a.39f555661f114d2993bdb09beb057a60' });
 ig.use({ client_id: 'c1a259af42144c39b49b09908b3c3666',
@@ -184,6 +185,17 @@ module.exports = (function() {
 				}else{
 					res.json(results);
 				};
+			});
+		},
+
+		newComment: function(req, res){
+			var comment = new Comment(req.body);
+			comment.save(function(err, results){
+				if(err){
+					console.log('error', err);
+				}else{
+					res.json(results);
+				}
 			});
 		}
 

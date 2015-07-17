@@ -32,7 +32,14 @@ var ConsSchema = new mongoose.Schema({
 	end_date: Date,
 });
 
+var CommentsSchema = new mongoose.Schema({
+	name: String,
+	email: String, 
+	comment: String,
+});
+
 mongoose.model('News', NewsSchema);
 mongoose.model('Blogs', BlogsSchema);
 mongoose.model('Users', UsersSchema);
 mongoose.model('Cons', ConsSchema);
+mongoose.model('Comments', CommentsSchema);

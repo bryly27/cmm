@@ -1,7 +1,40 @@
 <div ng-controller="contact_controller" class="container content">
 
+	<h3>Contact Me</h3>
+	<div class="row">
+		<div class="col-md-10 col-sm-10 col-xs-12">
+			<p ng-show="sent">Message Sent</p>
+			<form name="userForm" ng-submit="submitForm(user)" novalidate ng-hide="sent">
 
-	<h1>Contact coming soon!</h1>
+		   <!-- NAME -->
+			  <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid && !userForm.name.$pristine }">
+			    <label>Name</label>
+			    <input type="text" name="name" class="form-control" ng-model="user.name" required>
+			    <p ng-show="userForm.name.$invalid && !userForm.name.$pristine" class="help-block">You name is required.</p>
+			  </div>
+
+		    <!-- EMAIL -->
+		    <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid && !userForm.email.$pristine }">
+		      <label>Email</label>
+		      <input type="email" name="email" class="form-control" ng-model="user.email" required>
+		      <p ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+		    </div>
+
+		     <!-- EMAIL -->
+		    <div class="form-group" ng-class="{ 'has-error' : userForm.comment.$invalid && !userForm.comment.$pristine }">
+		      <label>Comment</label>
+		      <textarea class="form-control" rows="5" id="comment" ng-model="user.comment" required></textarea>
+		      <p ng-show="userForm.comment.$invalid && !userForm.comment.$pristine" class="help-block">Enter a valid email.</p>
+		    </div>
+
+		    <button type="submit" class="btn btn-primary" ng-disabled="userForm.$invalid">Submit</button>
+
+		  </form>
+			
+		</div>
+	</div>
+
+
 
 
 </div>

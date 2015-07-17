@@ -59,6 +59,10 @@ app.get('/news/get_blogs', function(req, res){
 app.post('/news/delete_blog', function(req, res){
 	models.delete_blog(req, res);
 });
+
+app.post('/newComment', function(req, res){
+	models.newComment(req, res);
+});
 	
 
 	
