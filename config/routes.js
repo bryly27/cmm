@@ -56,13 +56,14 @@ app.get('/news/get_blogs', function(req, res){
 	models.get_blogs(req, res);
 });
 
+app.post('/comment/newComment', function(req, res){
+	models.newComment(req, res);
+});
+
 app.post('/news/delete_blog', function(req, res){
 	models.delete_blog(req, res);
 });
 
-app.post('/comment/newComment', function(req, res){
-	models.newComment(req, res);
-});
 
 	
 
