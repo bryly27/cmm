@@ -60,7 +60,7 @@ app.post('/news/delete_blog', function(req, res){
 	models.delete_blog(req, res);
 });
 
-app.post('/newComment', function(req, res){
+app.post('/comment/newComment', function(req, res){
 	models.newComment(req, res);
 });
 	
