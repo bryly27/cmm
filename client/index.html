@@ -20,6 +20,8 @@
 	<script type="text/javascript" src="angular/factories/admin-factory.js"></script>
 	<script type="text/javascript" src="angular/controllers/blog-controller.js"></script>
 	<script type="text/javascript" src="angular/factories/blog-factory.js"></script>
+	<script type="text/javascript" src="angular/controllers/contact-controller.js"></script>
+	<script type="text/javascript" src="angular/factories/contact-factory.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-local-storage/0.1.5/angular-local-storage.min.js"></script>
 	<!-- jquery -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
@@ -70,10 +72,16 @@
 	                   <a class="page-scroll" href="#/cosplayers">Cosplayers</a>
 	                </li>
 	                <li>
+	                   <a class="page-scroll" href="#/contact">Contact</a>
+	                </li>
+	                <li>
 	                	<a target='_blank' href="https://www.facebook.com/cosplaymademe?fref=ts"><i class="fa fa-facebook-square fa-2x"></i></a>
 	                </li>
 	                <li>
 										<a target='_blank' href="http://www.instagram.com/cosplaymademe"><i class="fa fa-instagram fa-2x"></i></a>
+	                </li>
+	                <li>
+										<a target='_blank' href="https://www.youtube.com/channel/UC-tCPXw5yWIY2FnPw-Inrng"><i class="fa fa-youtube-play fa-2x"></i></a>
 	                </li>
 		            </ul>
 			        </div>
@@ -85,7 +93,20 @@
 		<!-- end nav bar -->
 		
 		<!-- load partials -->
-		<div ng-view=''>
+		<div class="row">
+			<div ng-view='' class="col-md-9 col-sm-9 col-xs-12"></div>
+			<div class="col-md-2 col-sm-2 col-sm-12 content">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- cosplaymademerightbar -->
+				<ins class="adsbygoogle"
+				     style="display:block"
+				     data-ad-client="ca-pub-6439372639315752"
+				     data-ad-slot="7560618425"
+				     data-ad-format="auto"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
 		</div>
 	</div>	
 	<!-- adsense -->

@@ -1,4 +1,4 @@
-cosplay.controller('profiles_controller', function($scope, profiles_factory) {
+cosplay.controller('profiles_controller', function($scope, profiles_factory, $location) {
 
 
   profiles_factory.get_user(function(results){

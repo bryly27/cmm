@@ -22,11 +22,17 @@ cosplay.config(function($routeProvider){
 		.when('/cosplayers',{
 			templateUrl: 'partials/cosplayers.html',
 		})
+		.when('/contact',{
+			templateUrl: 'partials/contact.html',
+		})
 		.when('/admin_login',{
 			templateUrl: 'partials/admin/admin_login.html',
 		})
 		.when('/admin_home', {
 			templateUrl: 'partials/admin/admin_home.html',
+		})
+		.when('/admin_email', {
+			templateUrl: 'partials/admin/admin_email.html',
 		})
 		.otherwise({
 			redirectTo: '/'

@@ -4,8 +4,6 @@ cosplay.controller('admin_controller', function($scope, $location, $route, admin
 
 	if(!localStorageService.get('current_user')){
 		$location.path('/admin_login');
-	}else{
-		$location.path('/admin_home');
 	}
 
   $scope.register = function(data){
