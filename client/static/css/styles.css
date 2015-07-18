@@ -85,3 +85,10 @@ body {
   letter-spacing: 3px;
   padding-bottom: 10px;
 }
+
+#website_tag h1{
+    color: #d11717;
+}
+.header {
+    background-color: #331717;
+}
