@@ -1,6 +1,6 @@
-.header {
+/*.header {
 	border-bottom: 1px solid black;
-}
+}*/
 
 .header li {
 	display: inline-block;
@@ -75,9 +75,9 @@ body {
    color: white;
 }
 .backed {
-    border-radius: 5px;
-    margin-top: 50px;
-    padding: 2px;
+  border-radius: 5px;
+  margin-top: 50px;
+  padding: 2px;
   background: rgb(34,34,34); /* for IE */
   background: rgba(34,34,34,0.75);
   color: white;
@@ -90,5 +90,9 @@ body {
     color: #d11717;
 }
 .header {
-    background-color: #331717;
+    /*background-color: #331717;*/
+    background-color: #171942
+}
+.navbar {
+    border-bottom: 3px solid #331717;
 }
