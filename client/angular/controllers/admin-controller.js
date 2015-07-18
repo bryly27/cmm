@@ -98,6 +98,17 @@ cosplay.controller('admin_controller', function($scope, $location, $route, admin
     return $sce.trustAsHtml(data);
   };
 
+  admin_factory.getComments(function(results){
+    $scope.comments = results;
+  });
+
+  $scope.deleteComment = function(data){
+    admin_factory.deleteComment(data, function(){
+      admin_factory.getComments(function(results){
+        $scope.comments = results;
+      });
+    });
+  };
 
 
 

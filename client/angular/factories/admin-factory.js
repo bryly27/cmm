@@ -68,6 +68,18 @@ cosplay.factory('admin_factory', function($http) {
 		});
 	};
 
+	factory.getComments = function(callback){
+		$http.get('/admin/comments').success(function(results){
+			callback(results);
+		});
+	};
+
+	factory.deleteComment = function(data, callback){
+		$http.post('/admin/deleteComment', data).success(function(results){
+			callback();
+		})
+	};
+
 
 
 	return factory;

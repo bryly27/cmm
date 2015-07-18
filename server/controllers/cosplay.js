@@ -80,7 +80,6 @@ module.exports = (function() {
 
 		login: function(req, res){
 			User.findOne({username: req.body.username}, function(err, results){
-				console.log(results);
 				if(results === null){
 					res.json({error: 'You did not enter a valid information'});
 				}else if(results.password !== req.body.password){
@@ -197,6 +196,26 @@ module.exports = (function() {
 					res.json(results);
 				}
 			});
+		}, 
+
+		get_comments: function(req, res){
+			Comment.find({}, function(err, results){
+				if(err){
+					console.log('error', err);
+				}else{
+					res.json(results);
+				}
+			});
+		},
+
+		deleteComment: function(req, res){
+			Comment.remove({_id: req.body._id}, function(err, results){
+				if(err){
+					console.log('error', err);
+				}else{
+					res.json();
+				}
+			});	
 		}
 
 
