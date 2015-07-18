@@ -8,7 +8,7 @@
 
 
 
-			<div class='blog_content' ng-repeat="blog in blogs | orderBy: '-date'">
+			<div class='blog_content backed' ng-repeat="blog in blogs | orderBy: '-date'">
 				<div class='row'>
 					<div class='col-md-4 col-sm-6'>
 						<img ng-if='blog.photo_link' ng-src='{{blog.photo_link}}'>

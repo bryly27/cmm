@@ -66,3 +66,22 @@ ul {
         overflow: hidden!important;
     }
 }
+
+body {
+   background-image: url("/static/images/spiderman-background.jpg");
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-size: cover;
+   color: white;
+}
+.backed {
+    border-radius: 5px;
+    margin-top: 50px;
+    padding: 2px;
+  background: rgb(34,34,34); /* for IE */
+  background: rgba(34,34,34,0.75);
+  color: white;
+  font-family: 'Abel', sans-serif;
+  letter-spacing: 3px;
+  padding-bottom: 10px;
+}

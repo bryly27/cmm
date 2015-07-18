@@ -7,7 +7,7 @@
 
 
 
-			<div class='news_content' ng-repeat="new in news | orderBy: '-date'">
+			<div class='news_content backed' ng-repeat="new in news | orderBy: '-date'">
 				<div class='row'>
 					<div class='col-md-4 col-sm-6'>
 						<img ng-if='new.photo_link' ng-src='{{new.photo_link}}'>
