@@ -38,12 +38,10 @@
 
 <script type="text/javascript">
 	$(document).ready(function(){
-		console.log('jquery loaded');
 
 		$('.body').hide();
 		$('.intro').hide();
 		$('.intro').fadeIn(4000, function(){
-			console.log('finished');
 			$(this).hide();
 			$('.body').fadeIn();
 		});
