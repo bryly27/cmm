@@ -96,3 +96,18 @@ body {
 .navbar {
     border-bottom: 3px solid #331717;
 }
+
+.intro {
+    text-align: center;
+}
+
+.intro h1 {
+    font-family: 'Ceviche One', cursive;
+    color: #d11717;
+    font-size: 12vw;
+    margin-top: 200px;
+    display: inline-block;
+    text-shadow: 0 0 3px white, 0 0 5px #0000FF;
+}
+
+

@@ -36,93 +36,115 @@
 	<link href='http://fonts.googleapis.com/css?family=Ceviche+One' rel='stylesheet' type='text/css'>
 </head>
 
-<body>
-	<div ng-app='cosplay'>
-		<!-- nav bar -->
-			<nav class="navbar navbar-default navbar-fixed-top">
-				<div class='header'>
-			    <div class="container">
-			        <!-- Brand and toggle get grouped for better mobile display -->
-			        <div class="navbar-header page-scroll">
-			            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			                <span class="sr-only">Toggle navigation</span>
-			                <span class="icon-bar"></span>
-			                <span class="icon-bar"></span>
-			                <span class="icon-bar"></span>
-			            </button>
-			            <a class="page-scroll" href="#/" id='website_tag'><h1>CosplayMadeMe</h1></a>
-			        </div>
+<script type="text/javascript">
+	$(document).ready(function(){
+		console.log('jquery loaded');
 
-			        <!-- Collect the nav links, forms, and other content for toggling -->
-			        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		            <ul class="nav navbar-nav navbar-right">
-	                <li class="hidden">
-	                    <a href=""></a>
-	                </li>
-	                <li>
-	                    <a class="page-scroll" href="#/">Home</a>
-	                </li>
-	                <li>
-	                    <a class="page-scroll" href="#/news">News</a>
-	                </li>
-	                <li>
-	                	<a class="page-scroll" href="#/blog">Blog</a>
-	                </li>
-	                <li>
-	                   <a class="page-scroll" href="#/cosplayers">Cosplayers</a>
-	                </li>
-	                <li>
-	                   <a class="page-scroll" href="#/contact">Contact</a>
-	                </li>
-	                <li>
-	                	<a target='_blank' href="https://www.facebook.com/cosplaymademe?fref=ts"><i class="fa fa-facebook-square fa-2x"></i></a>
-	                </li>
-	                <li>
-										<a target='_blank' href="http://www.instagram.com/cosplaymademe"><i class="fa fa-instagram fa-2x"></i></a>
-	                </li>
-	                <li>
-										<a target='_blank' href="https://www.youtube.com/channel/UC-tCPXw5yWIY2FnPw-Inrng"><i class="fa fa-youtube-play fa-2x"></i></a>
-	                </li>
-	                <li>
-										<a target='_blank' href="http://www.twitter.com/cosplaymademe"><i class="fa fa-twitter fa-2x"></i></a>
-	                </li>
-		            </ul>
-			        </div>
-			        <!-- /.navbar-collapse -->
-			    </div>
-			  </div>
-			    <!-- /.container-fluid -->
-			</nav>
-		<!-- end nav bar -->
+		$('.body').hide();
+		$('.intro').hide();
+		$('.intro').fadeIn(4000, function(){
+			console.log('finished');
+			$(this).hide();
+			$('.body').fadeIn();
+		});
 		
-		<!-- load partials -->
-		<div class="row">
-			<div ng-view='' class="col-md-9 col-sm-9 col-xs-12"></div>
-			<div class="col-md-2 col-sm-2 col-sm-12 content">
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- cosplaymademerightbar -->
-				<ins class="adsbygoogle"
-				     style="display:block"
-				     data-ad-client="ca-pub-6439372639315752"
-				     data-ad-slot="7560618425"
-				     data-ad-format="auto"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
+
+
+	});
+</script>
+
+<body>
+	<div class="intro col-md-12 col-sm-12 col-xs-12">
+		<h1>#CosplayMadeMe</h1>
+	</div>
+	<div class="body">
+		<div ng-app='cosplay'>
+			<!-- nav bar -->
+				<nav class="navbar navbar-default navbar-fixed-top">
+					<div class='header'>
+				    <div class="container">
+				        <!-- Brand and toggle get grouped for better mobile display -->
+				        <div class="navbar-header page-scroll">
+				            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				                <span class="sr-only">Toggle navigation</span>
+				                <span class="icon-bar"></span>
+				                <span class="icon-bar"></span>
+				                <span class="icon-bar"></span>
+				            </button>
+				            <a class="page-scroll" href="#/" id='website_tag'><h1>CosplayMadeMe</h1></a>
+				        </div>
+
+				        <!-- Collect the nav links, forms, and other content for toggling -->
+				        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			            <ul class="nav navbar-nav navbar-right">
+		                <li class="hidden">
+		                    <a href=""></a>
+		                </li>
+		                <li>
+		                    <a class="page-scroll" href="#/">Home</a>
+		                </li>
+		                <li>
+		                    <a class="page-scroll" href="#/news">News</a>
+		                </li>
+		                <li>
+		                	<a class="page-scroll" href="#/blog">Blog</a>
+		                </li>
+		                <li>
+		                   <a class="page-scroll" href="#/cosplayers">Cosplayers</a>
+		                </li>
+		                <li>
+		                   <a class="page-scroll" href="#/contact">Contact</a>
+		                </li>
+		                <li>
+		                	<a target='_blank' href="https://www.facebook.com/cosplaymademe?fref=ts"><i class="fa fa-facebook-square fa-2x"></i></a>
+		                </li>
+		                <li>
+											<a target='_blank' href="http://www.instagram.com/cosplaymademe"><i class="fa fa-instagram fa-2x"></i></a>
+		                </li>
+		                <li>
+											<a target='_blank' href="https://www.youtube.com/channel/UC-tCPXw5yWIY2FnPw-Inrng"><i class="fa fa-youtube-play fa-2x"></i></a>
+		                </li>
+		                <li>
+											<a target='_blank' href="http://www.twitter.com/cosplaymademe"><i class="fa fa-twitter fa-2x"></i></a>
+		                </li>
+			            </ul>
+				        </div>
+				        <!-- /.navbar-collapse -->
+				    </div>
+				  </div>
+				    <!-- /.container-fluid -->
+				</nav>
+			<!-- end nav bar -->
+			
+			<!-- load partials -->
+			<div class="row">
+				<div ng-view='' class="col-md-9 col-sm-9 col-xs-12"></div>
+				<div class="col-md-2 col-sm-2 col-sm-12 content">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- cosplaymademerightbar -->
+					<ins class="adsbygoogle"
+					     style="display:block"
+					     data-ad-client="ca-pub-6439372639315752"
+					     data-ad-slot="7560618425"
+					     data-ad-format="auto"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
 			</div>
-		</div>
-	</div>	
-	<!-- adsense -->
-	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	<!-- cosplaymademe_blog -->
-	<ins class="adsbygoogle"
-	     style="display:block"
-	     data-ad-client="ca-pub-6439372639315752"
-	     data-ad-slot="5974858022"
-	     data-ad-format="auto"></ins>
-	<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-	</script>
+		</div>	
+		<!-- adsense -->
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+		<!-- cosplaymademe_blog -->
+		<ins class="adsbygoogle"
+		     style="display:block"
+		     data-ad-client="ca-pub-6439372639315752"
+		     data-ad-slot="5974858022"
+		     data-ad-format="auto"></ins>
+		<script>
+		(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</div>
 
 </body>
 <script>
