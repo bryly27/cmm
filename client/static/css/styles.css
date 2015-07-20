@@ -109,5 +109,8 @@ body {
     display: inline-block;
     text-shadow: 0 0 3px white, 0 0 5px #0000FF;
 }
+form {
+    color: black;
+}
 
 
